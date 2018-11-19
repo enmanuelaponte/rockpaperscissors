@@ -10,11 +10,28 @@
 // DOCUMENT READY FUNCTION BELOW
 var randomNumber= 0;
 var computerChoice = '';
+var winner = '';
+var userChoice = "";
 $("#shoot").click(function () {
-    $("#userChoice").text($("#input").val());
-    randomNumber = Math.floor(Math.random() * 3 );
-    var userChoice = $("#input").val();
-   
+    userChoice = $("#input").val();
+    $("#userChoice").text(userChoice);
+    randomNumber = Math.random();
+    if(randomNumber > 0.6) {
+        computerChoice ="rock";
+        $("#computerChoice").html(computerChoice);
+    } 
+    
+        else if(randomNumber > 0.3) {
+        computerChoice ="paper";
+        $("#computerChoice").html(computerChoice);
+    }
+    
+        else {
+        computerChoice ="scissors";
+        $("#computerChoice").html(computerChoice);
+
+        }
+    
 
 });
-var winner = '';
+  //  randomNumber = Math.floor(Math.random() * 3 );
